@@ -160,7 +160,7 @@ class Reddit:
     ### Get the post from the reddit api
     def retrive_post(self,subreddit,pages):
         try:
-            headers = {"Authorization": self.access_token, "User-Agent": "ChangeMeClient/0.1 by Jitesh002"}
+            headers = {"Authorization": self.access_token, "User-Agent": "ChangeMeClient/0.1 by "+username}
             url = f"https://oauth.reddit.com{subreddit}?limit=5&g={country}"
             response = requests.get(url, headers=headers).json()
             data = response['data']['children']
